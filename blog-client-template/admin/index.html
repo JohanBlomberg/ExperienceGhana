@@ -5,7 +5,43 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
+<style>
+	table {
+		margin-top: 20px;
+		border-collapse: collapse;
+	}
+
+	table, tr, th, td {
+		border: 1px solid #333;
+		padding: 10px;
+	}
+</style>
+
 <body>
+    <button id="blog-page-btn">Blog Page</button>
+    <h1>Handle Blog Posts</h1>
+    <button id="create-post-btn">Create Post</button>
+    <table id="data-table">
+        <thead>
+			<tr>
+				<th>Title</th>
+				<th>Author</th>
+				<th>Date</th>
+                <th>Tags</th>
+                <th>Manage</th> 
+			</tr>
+		</thead>
+
+		<tbody>
+			<!-- <tr>
+				<td>exempel</td>
+				<td>exempel</td>
+			</tr> -->
+		</tbody>
+    </table>
+    
+   
     <script src="js/manage-posts.js"></script>
 </body>
 </html>
