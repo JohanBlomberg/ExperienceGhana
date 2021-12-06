@@ -12,7 +12,7 @@ async function fetchAllBlogPosts() {
         for(let blogPost of blogPosts) {
             let blogDate = new Date(blogPost.date);
             let formatedDate = `${blogDate.getFullYear()}-${blogDate.getMonth() + 1}-${blogDate.getDate()} ${blogDate.getHours()}:${blogDate.getMinutes()}`
-
+            let id = blogPost._id
 
             blogPostsHTML += `
                 
@@ -21,7 +21,7 @@ async function fetchAllBlogPosts() {
                     <p>${blogPost.content} <br> <span class="date">- ${formatedDate}</span> </p>
                     <p>${blogPost.author}</p>
                     <i>${blogPost.tags}</i>
-                    <div>
+                    <a href="post.html" data-id="${id}"><i>Read more</i></a>
                         <a href="#">Update</a> |
                         <a href="#">Delete</a> 
                     </div>
