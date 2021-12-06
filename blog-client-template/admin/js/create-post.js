@@ -13,8 +13,9 @@ function createNewPost() {
             "title": formData.get('title'),
             "author": formData.get('author'),
             "content": formData.get('content'),
-            "tags": formData.get('tags')
+            "tags": formData.getAll('tags')
         }
+        console.log(formDataObject)
 
         try {
             await fetch('http://localhost:5000/posts', {
