@@ -21,7 +21,7 @@ async function fetchAllBlogPosts() {
                     <p>${blogPost.content} <br> <span class="date">- ${formatedDate}</span> </p>
                     <p>${blogPost.author}</p>
                     <i>${blogPost.tags}</i>
-                    <a href="post.html" data-id="${id}"><i>Read more</i></a>
+                    <a href="post.html" class=\"read-more\" data-id="${id}"><i>Read more</i></a>
                         <a href="#">Update</a> |
                         <a href="#">Delete</a> 
                     </div>
@@ -29,7 +29,9 @@ async function fetchAllBlogPosts() {
                
             `
         }
-
+        let readMore = document.getElementsByClassName('read-more')
+        console.log(readMore)
+        
         document.getElementById('blog-content').innerHTML = blogPostsHTML;
     } catch(error) {
         console.log(error);
