@@ -1,7 +1,7 @@
 *{
     box-sizing: border-box;
 }
-.blogg-content{
+.blog-content{
     width: 960px;
     height: auto;
     margin: 0 auto;
@@ -46,4 +46,15 @@ size: cover;
 }
 h1{
     font-size:xx-large;
+}
+
+#one-blog-post{
+    width: 960px;
+    height: auto;
+    margin: 0 auto;
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    text-align: center;
 }
