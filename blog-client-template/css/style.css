@@ -1,0 +1,49 @@
+*{
+    box-sizing: border-box;
+}
+.blogg-content{
+    width: 960px;
+    height: auto;
+    margin: 0 auto;
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    align-content: center;
+}
+
+header{
+    width:960px;
+    height: 400px;
+    display: flex;
+    justify-content: space-around;
+    align-self: center;
+    border: 1px solid black;
+    margin: 0 auto;
+
+ 
+}
+main{
+    width: 100%;
+    height: auto;
+    border: 1px solid black;
+    min-height: 500px;
+    height: auto;
+
+}
+#hero-image{
+background-color: beige;
+size: cover;
+}
+
+.each-blog-post{
+    width: 80%;
+    height: auto;
+    border: 1px solid black;
+    text-align: center;
+    margin: 2% auto;
+    padding: 2%; 
+}
+h1{
+    font-size:xx-large;
+}
