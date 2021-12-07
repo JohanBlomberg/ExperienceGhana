@@ -1,3 +1,45 @@
+window.onload = function() {
+    fetchAllBlogPosts();
+}
+
+let dataTableBody = document.querySelector('#data-table tbody');
+
+async function fetchAllBlogPosts() {
+    try {
+        let response = await fetch('http://localhost:5000/posts');
+        let blogPosts = await response.json();
+        console.log(blogPosts);
+
+        
+        for(let blogPost of blogPosts) {
+            let blogDate = new Date(blogPost.date);
+            let formatedDate = `${blogDate.getFullYear()}-${blogDate.getMonth() + 1}-${blogDate.getDate()} ${blogDate.getHours()}:${blogDate.getMinutes()}`
+            let id = blogPost._id
+
+            dataTableBody.innerHTML += `
+                
+                <tr>
+                <td><h1>${blogPost.title}</h1></td>
+                <td><p>${blogPost.author}</p></td>
+                <td>  <p><span class="date">- ${formatedDate}</span> </p> </td>
+                  <td>  <i>${blogPost.tags}</i> </td>
+                       <td> <button><a href="update-post.html">Update</a></button> | <button onclick="deletePost(event)">Delete</button> </td>
+                        
+                    </div>
+                    </article>
+               </tr>
+            `;
+        }
+
+        
+    } catch(error) {
+        console.log(error);
+    }
+
+}
+function deletePost(event) {
+    event.target.parentNode.parentNode.remove();
+}
 
 
 
