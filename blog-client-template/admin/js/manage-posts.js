@@ -23,7 +23,7 @@ async function fetchAllBlogPosts() {
                 <td><p>${blogPost.author}</p></td>
                 <td>  <p><span class="date">- ${formatedDate}</span> </p> </td>
                   <td>  <i>${blogPost.tags}</i> </td>
-                       <td> <button><a href="update-post.html">Update</a></button> | <button onclick="deletePost(event)">Delete</button> </td>
+                       <td> <button><a href="update-post.html">Update</a></button> | <button class="delete-post" data-id="${blogPost['_id']}">Delete</button> </td>
                         
                     </div>
                     </article>
@@ -35,10 +35,35 @@ async function fetchAllBlogPosts() {
     } catch(error) {
         console.log(error);
     }
-
+    deletePostEvent();
 }
-function deletePost(event) {
-    event.target.parentNode.parentNode.remove();
+//function deletePost(event) {
+  //  event.target.parentNode.parentNode.remove();
+//}
+
+
+function deletePostEvent() {
+    let deleteButtons = document.getElementsByClassName('delete-post');
+    console.log(deleteButtons);
+
+    for (let button of deleteButtons) {
+        button.addEventListener('click', async function(e) {
+            e.preventDefault();
+
+            try {
+                await fetch('http://localhost:5000/posts/' + e.target.dataset.id,
+                    {
+                        method: 'DELETE'
+                    }
+                );
+
+                e.target.parentNode.parentNode.remove();
+            } catch(error) {
+                console.log(error)
+            }
+
+        })
+    }
 }
 
 
