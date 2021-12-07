@@ -23,7 +23,7 @@ async function fetchAllBlogPosts() {
                 <td><p>${blogPost.author}</p></td>
                 <td>  <p><span class="date">- ${formatedDate}</span> </p> </td>
                   <td>  <i>${blogPost.tags}</i> </td>
-                       <td> <button><a href="update-post.html">Update</a></button> | <button class="delete-post" data-id="${blogPost['_id']}">Delete</button> </td>
+                       <td> <button><a href="update-post.html?id=${blogPost['_id']}">Update</a></button> | <button class="delete-post" data-id="${blogPost['_id']}">Delete</button> </td>
                         
                     </div>
                     </article>
