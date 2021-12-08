@@ -14,12 +14,13 @@
 
 header{
     width:960px;
-    height: 400px;
+    height: fit-content;
     display: flex;
     justify-content: space-around;
     align-self: center;
     border: 1px solid black;
     margin: 0 auto;
+    
 
  
 }
@@ -34,18 +35,21 @@ main{
 #hero-image{
 background-color: beige;
 size: cover;
+height: 300px;
+
 }
 
 .each-blog-post{
     width: 80%;
-    height: auto;
+    max-height: 300px;
     border: 1px solid black;
     text-align: center;
     margin: 2% auto;
     padding: 2%; 
 }
-h1{
+#one-post-headline{
     font-size:xx-large;
+    min-height: 100px;
 }
 
 #one-blog-post{
@@ -57,4 +61,14 @@ h1{
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     text-align: center;
+}
+#one-post-footer{
+    border: 1px solig black;
+    display: flex;
+    flex-flow: row-reverse wrap;
+    justify-content: space-between;
+    text-align: center;
+}
+h1{
+    font-size: xx-large;
 }
