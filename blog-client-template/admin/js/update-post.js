@@ -28,6 +28,7 @@ window.onload = function() {
 
 
 
+
  function updateBlogPostEvent(id) {
     let form = document.getElementById('updateForm');
     form.addEventListener('submit', async function(e) {
@@ -57,6 +58,7 @@ window.onload = function() {
         } catch(error) {
             console.log(error);
         }
+
     })
 
 }
