@@ -11,11 +11,29 @@
 </header>
     <div id="mainContainer">
         <form id="updateForm">
-            <input type="text" id="inputField"></input>
-        </form>
-        <button id="submitFormBtn">Submit</button>
+            <p>Title:</p>
+    <input type="text" name="title" id="update-title"></input>
+    <p>Author:</p>
+    <input type="text" name="author" id="update-author"></input>
+    <p>Content:</p>
+    <textarea name="content" id="content-textarea" cols="40" rows="5"></textarea>
+    <p>Tags:</p>
+    <label for="tags" name="tags"></label>
+    <select name="tags" id="tags" size="5" multiple>
+    <option value="Party">Party</option>
+    <option value="Tourism">Tourism</option>
+    <option value="Beach">Beach</option>
+    <option value="Food">Food</option>
+    <option value="Wedding">Wedding</option>
+    </select>
+                
+            
+    <button id="submitFormBtn">Submit</button>
+            
+ </form>
     </div>
     <footer>PLACEHOLDER FOOTER</footer>
     <script src="js/update-post.js"></script>
 </body>
 </html>
+
