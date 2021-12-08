@@ -6,10 +6,20 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+     <nav class="backBtn">
+            <a href='index.html'>Back to Admin</a>
+        </nav>
+
     <header>
         <h1>Create Blogpost</h1>
-</header>
+    </header>
+
+    <div id="errorMessage">
+
+     </div>
+     
     <div id="mainContainer">
+
         <form id="createForm">
             <p>Title:</p>
             <input type="text" name="title"></input>
@@ -19,16 +29,18 @@
             <textarea name="content" id="content-textarea" cols="40" rows="5"></textarea>
             <p>Tags:</p>
             <label for="tags" name="tags"></label>
-    <select name="tags" id="tags" size="5" multiple>
-      <option value="Party">Party</option>
-      <option value="Tourism">Tourism</option>
-      <option value="Beach">Beach</option>
-      <option value="Food">Food</option>
-      <option value="Wedding">Wedding</option>
-    </select>
-    <input type="submit" value="create">
+                 <select name="tags" id="tags" size="5" multiple>
+                    <option value="Party">Party</option>
+                    <option value="Tourism">Tourism</option>
+                    <option value="Beach">Beach</option>
+                    <option value="Food">Food</option>
+                    <option value="Wedding">Wedding</option>
+                 </select>
+
+                  <input type="submit" value="create">
         </form>
-    </div>
+  </div>
+
     <footer>PLACEHOLDER FOOTER</footer>
     <script src="js/create-post.js"></script>
 </body>
