@@ -2,10 +2,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Create Blogpost</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <header>
+        <h1>Create Blogpost</h1>
+</header>
+    <div id="mainContainer">
+        <form id="createForm">
+            <p>Title:</p>
+            <input type="text" name="title"></input>
+            <p>Author:</p>
+            <input type="text" name="author"></input>
+            <p>Content:</p>
+            <textarea name="content" id="content-textarea" cols="40" rows="5"></textarea>
+            <p>Tags:</p>
+            <label for="tags" name="tags"></label>
+    <select name="tags" id="tags" size="5" multiple>
+      <option value="Party">Party</option>
+      <option value="Tourism">Tourism</option>
+      <option value="Beach">Beach</option>
+      <option value="Food">Food</option>
+      <option value="Wedding">Wedding</option>
+    </select>
+    <input type="submit" value="create">
+        </form>
+    </div>
+    <footer>PLACEHOLDER FOOTER</footer>
     <script src="js/create-post.js"></script>
 </body>
 </html>
