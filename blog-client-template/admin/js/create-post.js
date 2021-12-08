@@ -5,9 +5,10 @@ window.onload = function() {
 function createNewPost() {
     let form = document.getElementById('createForm');
 
+
     form.addEventListener('submit', async function(e) {
-        e.preventDefault();
-       
+    
+
         let formData = new FormData(form);
         formDataObject = {
             "title": formData.get('title'),
@@ -15,7 +16,6 @@ function createNewPost() {
             "content": formData.get('content'),
             "tags": formData.getAll('tags')
         }
-        console.log(formDataObject)
 
         try {
             await fetch('http://localhost:5000/posts', {
@@ -26,8 +26,9 @@ function createNewPost() {
                 body: JSON.stringify(formDataObject),
             })
         } catch(error) {
-
+                console.log(error)
         }
+       
     });
 }
 
