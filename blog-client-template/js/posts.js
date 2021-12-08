@@ -11,6 +11,12 @@ async function fetchAllBlogPosts() {
         
         for(let blogPost of blogPosts) {
             console.log(blogPost)
+            let allTags = ""
+            for(let tag of blogPost.tags){
+                tag = " #" + tag
+                allTags += tag
+            }
+            
             
             let blogDate = new Date(blogPost.date);
             let getMonth = blogDate.getMonth()
@@ -57,8 +63,9 @@ async function fetchAllBlogPosts() {
             }
             let formatedDate = `${blogDate.getDate()} ${month} ${blogDate.getFullYear()}`
             let id = blogPost._id
-            let firstPageContent = blogPost.content.substring(0,1)
+            let firstPageContent = blogPost.content.substring(0,50)
             console.log(firstPageContent)
+
             blogPostsHTML += `
                 <article class="each-blog-post" data-id=${id}>
                 
@@ -74,7 +81,7 @@ async function fetchAllBlogPosts() {
                     </section>
 
                     <section id="tags-of-post">
-                    <i>${blogPost.tags}</i>
+                    <i>${allTags}</i>
                     </section>
 
                     </article>
