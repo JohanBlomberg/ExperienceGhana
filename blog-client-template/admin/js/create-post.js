@@ -7,7 +7,7 @@ function createNewPost() {
 
 
     form.addEventListener('submit', async function(e) {
-    
+    e.preventDefault();
 
         let formData = new FormData(form);
         formDataObject = {
@@ -29,6 +29,7 @@ function createNewPost() {
                 console.log(error)
         }
        
+        location.assign('index.html')
     });
 }
 
