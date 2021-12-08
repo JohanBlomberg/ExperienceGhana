@@ -68,7 +68,11 @@ getSpecificBlogPost()
                     let oneBlogPostHTML = `
                     <h1 id="one-post-headline">${specificBlogPost.title}</h1>
                     <div>
-                    <h3>${specificBlogPost.author}</h3>
+                    
+                    <div class="top-bottom">
+                    <h3>Posted by: ${specificBlogPost.author}</h3>
+                    </div>
+
                     <span class="date">${formatedDate}</span> 
                     </div>
                     <main id="each-blog-post">
@@ -76,6 +80,7 @@ getSpecificBlogPost()
                         <div id="blog-content">
                         <p>${specificBlogPost.content}</p>
                         </div>
+                        <div class="top-bottom">
                         <footer id="one-post-footer"><a href="index.html" id="back">back</a> <i>${allTags}</i></footer>
                     </main>
             `

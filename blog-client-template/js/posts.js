@@ -21,6 +21,7 @@ async function fetchAllBlogPosts() {
             let blogDate = new Date(blogPost.date);
             let getMonth = blogDate.getMonth()
             console.log(getMonth)
+            
             /*Set name of month*/ 
             let month;
             switch(getMonth){
@@ -68,21 +69,21 @@ async function fetchAllBlogPosts() {
 
             blogPostsHTML += `
                 <article class="each-blog-post" data-id=${id}>
-                
+                <div class="top-bottom"
+                <h1>Posted by ${blogPost.author}</h1>
+                </div>
+                <div class="blog-img"></div>
+               
                 <h1>${blogPost.title}</h1>
-
-                <section id="info-index">
-                <h5><i>${formatedDate}</i></h5>
-                    <h4>Written by: ${blogPost.author}</h4>
-                    </section>
-
-                    <section id="section-blog-content">
+                <h5> ${formatedDate}</h5>
+                <hr>
+                <section id="section-blog-content">
                     <p>${firstPageContent}<a href="post.html?id=${id}" class="read-more" data-id="${id}"><i>...Read more</i></a></p>
                     </section>
 
-                    <section id="tags-of-post">
+                    <div class="top-bottom"
                     <i>${allTags}</i>
-                    </section>
+                    </div>
 
                     </article>
             `
