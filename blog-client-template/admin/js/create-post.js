@@ -16,7 +16,7 @@ function createNewPost() {
             "content": formData.get('content'),
             "tags": formData.getAll('tags')
         }
-console.log(formDataObject);
+
         try {
             await fetch('http://localhost:5000/posts', {
                 method: 'POST', 
@@ -29,6 +29,7 @@ console.log(formDataObject);
                 console.log(error)
         }
        
+        location.assign('index.html')
     });
 }
 
