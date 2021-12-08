@@ -7,7 +7,7 @@ function createNewPost() {
 
 
     form.addEventListener('submit', async function(e) {
-    
+    e.preventDefault();
 
         let formData = new FormData(form);
         formDataObject = {
@@ -16,7 +16,7 @@ function createNewPost() {
             "content": formData.get('content'),
             "tags": formData.getAll('tags')
         }
-
+console.log(formDataObject);
         try {
             await fetch('http://localhost:5000/posts', {
                 method: 'POST', 
