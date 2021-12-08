@@ -13,7 +13,49 @@ async function fetchAllBlogPosts() {
         
         for(let blogPost of blogPosts) {
             let blogDate = new Date(blogPost.date);
-            let formatedDate = `${blogDate.getFullYear()}-${blogDate.getMonth() + 1}-${blogDate.getDate()} ${blogDate.getHours()}:${blogDate.getMinutes()}`
+            let getMonth = blogDate.getMonth()
+            console.log(getMonth)
+            /*Set name of month*/ 
+            let month;
+            switch(getMonth){
+                case 0:
+                month = "January";
+                break;
+                case 1:
+                month = "February";
+                break;
+                case 2:
+                month = "Mars";
+                break;
+                case 3:
+                month = "April";
+                break;
+                case 4:
+                month = "May";
+                break;
+                case 5:
+                month = "June";
+                break;
+                case 6:
+                month = "July";
+                break;
+                case 7:
+                month = "August";
+                break;
+                case 8:
+                month = "September";
+                break;
+                case 9:
+                month = "October";
+                break;
+                case 10:
+                month = "November";
+                break;
+                case 11:
+                month = "December";
+                break;
+            }
+            let formatedDate = `${blogDate.getDate()} ${month} ${blogDate.getFullYear()}`
             let id = blogPost._id
 
             dataTableBody.innerHTML += `
@@ -21,9 +63,9 @@ async function fetchAllBlogPosts() {
                 <tr>
                 <td><h1>${blogPost.title}</h1></td>
                 <td><p>${blogPost.author}</p></td>
-                <td>  <p><span class="date">- ${formatedDate}</span> </p> </td>
+                <td>  <p><span class="date">${formatedDate}</span> </p> </td>
                   <td>  <i>${blogPost.tags}</i> </td>
-                       <td> <button class="update-post"><a href="update-post.html?id=${blogPost['_id']}">Update</a></button> | <button class="delete-post" data-id="${blogPost['_id']}">Delete</button> </td>
+                       <td> <button class="update-post"><a href="update-post.html?id=${id}">Update</a></button> | <button class="delete-post" data-id="${blogPost['_id']}">Delete</button> </td>
                         
                     </div>
                     </article>
