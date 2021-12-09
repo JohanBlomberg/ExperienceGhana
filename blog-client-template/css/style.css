@@ -119,13 +119,17 @@ hr {
 #one-post-footer{
     border: 1px solig black;
     display: flex;
-    flex-flow: row-reverse wrap;
+    /* flex-flow: row-reverse wrap; */
     justify-content: space-between;
+    
     text-align: center;
 }
 #blog-content h1{
     font-size:xx-large;
     font-family: 'Open Sans', sans-serif;
+}
+#blog-content{
+    height: 70%;
 }
 #blog-content h1 + h5 {
     margin: -25px 0 20px;

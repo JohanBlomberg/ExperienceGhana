@@ -81,7 +81,7 @@ getSpecificBlogPost()
                         <p>${specificBlogPost.content}</p>
                         </div>
                         <div class="top-bottom">
-                        <footer id="one-post-footer"><a href="index.html" id="back">back</a> <i>${allTags}</i></footer>
+                        <footer id="one-post-footer"> <div><i>${allTags}</i></div>  <div><a href="index.html" id="back">back</a></div> </footer></div>
                     </main>
             `
                document.getElementById('one-blog-post').innerHTML = oneBlogPostHTML 
