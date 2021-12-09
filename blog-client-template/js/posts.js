@@ -4,7 +4,7 @@ window.onload = function() {
 
 async function fetchAllBlogPosts() {
     try {
-        let response = await fetch('http://localhost:5000/posts');
+        let response = await fetch('http://localhost:5000/posts', { mode: "no-cors"});
         let blogPosts = await response.json();
         console.log(blogPosts);
         let blogPostsHTML = '';    
