@@ -6,7 +6,7 @@ let dataTableBody = document.querySelector('#data-table tbody');
 
 async function fetchAllBlogPosts() {
     try {
-        let response = await fetch('https://localhost:5000/posts');
+        let response = await fetch('http://localhost:5000/posts');
         let blogPosts = await response.json();
         console.log(blogPosts);
 
@@ -95,7 +95,7 @@ function deletePostEvent() {
             e.preventDefault();
 
             try {
-                await fetch('https://localhost:5000/posts/' + e.target.dataset.id,
+                await fetch('http://localhost:5000/posts/' + e.target.dataset.id,
                     {
                         method: 'DELETE'
                     }

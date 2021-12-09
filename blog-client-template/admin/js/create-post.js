@@ -18,7 +18,7 @@ function createNewPost() {
         }
 
         try {
-            await fetch('https://localhost:5000/posts', {
+            await fetch('http://localhost:5000/posts', {
                 method: 'POST', 
                 headers: {
                     'Content-Type': 'application/json',
