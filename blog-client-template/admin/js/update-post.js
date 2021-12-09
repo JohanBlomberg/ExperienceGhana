@@ -13,7 +13,7 @@ window.onload = function() {
 
  async function getBlogPost(id) {
     try {
-        let response = await fetch('http://localhost:5000/posts/' + id);
+        let response = await fetch('https://localhost:5000/posts/' + id);
         let blogPost = await response.json();
         document.getElementById('tags').value = blogPost.tags;
         document.getElementById('content-textarea').value = blogPost.content;
@@ -52,7 +52,7 @@ window.onload = function() {
         // console.log(JSON.stringify(formDataObject));
 
         try {
-            await fetch('http://localhost:5000/posts/' + id, {
+            await fetch('https://localhost:5000/posts/' + id, {
                 method: 'PATCH', // GET, POST, PATCH, DELETE.
                 headers: {
                     'Content-Type': 'application/json',

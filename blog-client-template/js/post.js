@@ -5,7 +5,7 @@ getSpecificBlogPost()
     console.log(urlParams)
     let id = urlParams.get('id')
     console.log(id)
-    let url = "http://localhost:5000/posts/"
+    let url = "https://localhost:5000/posts/"
 
         async function getSpecificBlogPost(){
 
