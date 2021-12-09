@@ -66,23 +66,22 @@ getSpecificBlogPost()
                    
                     
                     let oneBlogPostHTML = `
+                    <div id="blog-content">
                     <h1 id="one-post-headline">${specificBlogPost.title}</h1>
-                    <div>
-                    
-                    <div class="top-bottom">
-                    <h3>Posted by: ${specificBlogPost.author}</h3>
-                    </div>
-
-                    <span class="date">${formatedDate}</span> 
-                    </div>
+                    <p><strong><i>${formatedDate}</i></strong></p> 
                     <main id="each-blog-post">
                     
-                        <div id="blog-content">
-                        <p>${specificBlogPost.content}</p>
-                        </div>
-                        <div class="top-bottom">
-                        <footer id="one-post-footer"> <div><i>${allTags}</i></div>  <div><a href="index.html" id="back">back</a></div> </footer></div>
+                    <div class="blog-img"></div>
+                    <p>${specificBlogPost.content}</p>
+                    <footer id="one-post-footer"> 
+                    
+                    <p class="author-one-post">Posted by: ${specificBlogPost.author}</p>
+                    
+                    <div><i>${allTags}</i></div>
+                    </footer>
+                    <a href="index.html" id="back">back</a>
                     </main>
+                    </div>
             `
                document.getElementById('one-blog-post').innerHTML = oneBlogPostHTML 
                 
