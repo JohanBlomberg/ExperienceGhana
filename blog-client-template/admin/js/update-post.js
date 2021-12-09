@@ -19,7 +19,10 @@ window.onload = function() {
         document.getElementById('content-textarea').value = blogPost.content;
         document.getElementById('update-author').value = blogPost.author;
         document.getElementById('update-title').value = blogPost.title;
+        let today = new Date(blogPost.date);
+        console.log(today);
        
+        
     } catch(error) {
         console.log(error);
     }
@@ -33,12 +36,15 @@ window.onload = function() {
     let form = document.getElementById('updateForm');
     form.addEventListener('submit', async function(e) {
         e.preventDefault();
+        
+        
         let formData = new FormData(form);
         formDataObject = {
             "title": formData.get('title'),
             "author": formData.get('author'),
             "content": formData.get('content'),
             "tags": formData.getAll('tags')
+
             
         }
 
@@ -62,6 +68,8 @@ window.onload = function() {
     })
 
 }
+
+
 
 
 
