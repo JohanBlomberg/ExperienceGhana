@@ -64,18 +64,18 @@ async function fetchAllBlogPosts() {
             }
             let formatedDate = `${blogDate.getDate()} ${month} ${blogDate.getFullYear()}`
             let id = blogPost._id
-            let firstPageContent = blogPost.content.substring(0,50)
+            let firstPageContent = blogPost.content.substring(0,300)
             console.log(firstPageContent)
 
             blogPostsHTML += `
                 <article class="each-blog-post" data-id=${id}>
                 <div class="top-bottom"
-                <h1>Posted by ${blogPost.author}</h1>
+                <p>Posted by ${blogPost.author}</p>
                 </div>
                 <div class="blog-img"></div>
                
                 <h1>${blogPost.title}</h1>
-                <h5> ${formatedDate}</h5>
+                <h5><i> ${formatedDate} </i></h5>
                 <hr>
                 <section id="section-blog-content">
                     <p>${firstPageContent}<a href="post.html?id=${id}" class="read-more" data-id="${id}"><i>...Read more</i></a></p>
