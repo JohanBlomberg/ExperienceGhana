@@ -14,9 +14,9 @@ body{
     background-size: cover;
     position: relative;
     display: flex;
-    justify-content: center;
+    justify-content:flex-end;
     align-items:flex-start;
-    flex-flow: row-reverse;
+    
 } 
 header{
     background-image: url("https://cdn.pixabay.com/photo/2017/01/02/18/58/accra-1947665_960_720.jpg");
@@ -27,16 +27,11 @@ header{
     justify-content: center;
     align-items: center;
 }
-.black-box{
-      background-color: rgb(0, 0, 0);
-      width: 100%;
-      box-shadow: rgba(15, 15, 15, 0.68) 0px -6px 17px 5px;
-    }
     
     .rainbow-text {
         font-family: 'Dancing Script', cursive;
         font-weight: bolder;
-        font-size: 100px;
+        font-size: 80px;
         text-shadow: rgba(0, 0, 0, 0.14) 5px 5px 42px;
         
     }
