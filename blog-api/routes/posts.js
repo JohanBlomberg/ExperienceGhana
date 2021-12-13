@@ -40,7 +40,8 @@ router.post('/', async (req, res) => {
         title: req.body.title,
         content: req.body.content,
         author: req.body.author,
-        tags: req.body.tags
+        tags: req.body.tags,
+        image: req.body.image
     });
 
     // post.save()
@@ -79,7 +80,8 @@ router.patch('/:postId', async (req, res) => {
                     title: req.body.title,
                     content: req.body.content,
                     author: req.body.author,
-                    tags: req.body.tags
+                    tags: req.body.tags,
+                    image: req.body.image
                 }
             }
         );
