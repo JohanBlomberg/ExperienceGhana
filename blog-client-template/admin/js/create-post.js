@@ -35,21 +35,3 @@ function createNewPost() {
     });
 }
 
-// let serializeForm = function (form) {
-//     debugger;
-//     var obj = {};
-//     var formData = new FormData(form);
-
-//     for (var key of formData.keys()) {
-//         let inputData = formData.getAll(key);
-// console.log(inputData)
-//         if (inputData.length > 1) {
-//             obj[key] = inputData;
-//         } else {
-//             obj[key] = inputData[0];    
-//         }
-//     }
-    
-//     // console.log(obj);
-//     return obj;
-// };

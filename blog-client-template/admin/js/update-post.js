@@ -12,6 +12,10 @@ window.onload = function() {
  async function getBlogPost(id) {
     try {
         let response = await fetch('http://localhost:5000/posts/' + id);
+        
+        if (!response.ok){
+            throw new Error ('Network problem')
+        }
         let blogPost = await response.json();
         document.getElementById('tags').value = blogPost.tags;
         document.getElementById('content-textarea').value = blogPost.content;

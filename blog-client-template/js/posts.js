@@ -5,6 +5,11 @@ window.onload = function() {
 async function fetchAllBlogPosts() {
     try {
         let response = await fetch('http://localhost:5000/posts');
+
+        if (!response.ok){
+            throw new Error ('Network problem')
+        }
+        
         let blogPosts = await response.json();
         let blogPostsHTML = '';    
         
@@ -18,9 +23,6 @@ async function fetchAllBlogPosts() {
             let blogDate = new Date(blogPost.date);
             let getMonth = blogDate.getMonth()
 
-            
-            /*Set name of month*/ 
-            let month;
             switch(getMonth){
                 case 0:
                 month = "January";
@@ -62,7 +64,6 @@ async function fetchAllBlogPosts() {
             let formatedDate = `${blogDate.getDate()} ${month} ${blogDate.getFullYear()}`
             let id = blogPost._id
             let firstPageContent = blogPost.content.substring(0,300)
-
 
             blogPostsHTML += `
                 <article class="each-blog-post" data-id=${id}>
