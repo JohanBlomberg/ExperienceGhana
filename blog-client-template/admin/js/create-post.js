@@ -14,7 +14,9 @@ function createNewPost() {
             "title": formData.get('title'),
             "author": formData.get('author'),
             "content": formData.get('content'),
+            "image": formData.get('image'),
             "tags": formData.getAll('tags')
+            
         }
 
         try {

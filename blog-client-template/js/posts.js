@@ -6,21 +6,18 @@ async function fetchAllBlogPosts() {
     try {
         let response = await fetch('http://localhost:5000/posts');
         let blogPosts = await response.json();
-        console.log(blogPosts);
         let blogPostsHTML = '';    
         
         for(let blogPost of blogPosts) {
-            console.log(blogPost)
             let allTags = ""
             for(let tag of blogPost.tags){
                 tag = " #" + tag
                 allTags += tag
             }
-            
-            
+                        
             let blogDate = new Date(blogPost.date);
             let getMonth = blogDate.getMonth()
-            console.log(getMonth)
+
             
             /*Set name of month*/ 
             let month;
@@ -65,14 +62,14 @@ async function fetchAllBlogPosts() {
             let formatedDate = `${blogDate.getDate()} ${month} ${blogDate.getFullYear()}`
             let id = blogPost._id
             let firstPageContent = blogPost.content.substring(0,300)
-            console.log(firstPageContent)
+
 
             blogPostsHTML += `
                 <article class="each-blog-post" data-id=${id}>
                 <div class="top-bottom"
                 <p>Posted by ${blogPost.author}</p>
                 </div>
-                <div class="blog-img"></div>
+                <div id="blog-img"><img src=${blogPost.image}></div>
                
                 <h1>${blogPost.title}</h1>
                 <h5><i> ${formatedDate} </i></h5>
@@ -89,6 +86,8 @@ async function fetchAllBlogPosts() {
             `
         }
                 document.getElementById('blog-content').innerHTML = blogPostsHTML;
+               
+
             } catch(error) {
             console.log(error);
         }
