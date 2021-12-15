@@ -3,26 +3,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/adminstyle.css">
 </head>
-
-<style>
-	table {
-		margin-top: 20px;
-		border-collapse: collapse;
-	}
-
-	table, tr, th, td {
-		border: 1px solid #333;
-		padding: 10px;
-	}
-</style>
 
 <body>
     <a href="../index.html" id="blog-page-link">Blog Page</a>
+
+<div id="main-content"> 
     
-    <h1>Handle Blog Posts</h1>
-    <a href="create-post.html">Create Post</a>
+    <h1 id="head-text">Handle Blog Posts</h1>
+    <a href="create-post.html" id="create-post-link">Create Post</a>
     <table id="data-table">
         <thead>
 			<tr>
@@ -38,6 +28,7 @@
 			<!-- content -->
 		</tbody>
     </table>
+</div>
     
    
     <script src="js/manage-posts.js"></script>
