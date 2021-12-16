@@ -1,0 +1,104 @@
+#submitFormBtn {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 100%;
+    background-color: #d2dbee;
+    border: none;
+    margin-top: 20px;
+}
+#submitFormBtn:hover {
+    background-color: #44fd44; 
+    border: 1px solid #b1ffa2;
+    font-size: larger;
+    cursor: pointer;
+}
+#submitFormBtn:focus{
+    border: 3px solid rgb(29, 245, 144);
+    background-color: rgb(225, 255, 208);
+}
+#inputField {
+    border-radius: 10px;
+    width: 100%;
+    height: 200px;
+}
+#mainContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h1 {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 35px;
+    margin-top: 10px;
+}
+#updateForm {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+#update-title {
+    width: 100%;
+}
+#update-author {
+    width: 100%;
+}
+#content-textarea {
+    border-style: groove;
+    width: 100%;
+}
+#tags {
+    padding: 5%;
+    overflow: hidden;
+}
+#update-title:focus {
+    border: 3px solid rgb(37, 252, 198);
+    background-color: rgb(225, 255, 208);
+}
+#update-author:focus {
+    border: 3px solid rgb(37, 252, 198);
+    background-color: rgb(225, 255, 208);
+}
+#content-textarea:focus {
+    border: 3px solid rgb(37, 252, 198);
+    background-color: rgb(225, 255, 208);
+}
+#tags:focus {
+    border: 3px solid rgb(37, 252, 198);
+    background-color: rgb(225, 255, 208);
+}
+#update-title:hover {
+    border: 3px solid rgb(37, 252, 198);
+    cursor: pointer;
+}
+#update-author:hover {
+    border: 3px solid rgb(37, 252, 198);
+    cursor: pointer;
+}
+#content-textarea:hover {
+    border: 3px solid rgb(37, 252, 198);
+    cursor: pointer;
+}
+#tags:hover {
+    border: 3px solid rgb(37, 252, 198);
+    cursor: pointer;
+}
+#backlink{
+    background-color: #e4edff;
+    border: none;
+    height: 40px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-decoration: none;
+    width: 110px;
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#backlink:hover {
+    background-color: #bbf5f7; 
+    cursor: pointer;
+}
+
