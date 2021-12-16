@@ -67,26 +67,22 @@ async function fetchAllBlogPosts() {
 
             blogPostsHTML += `
                 <article class="each-blog-post" data-id=${id}>
-                <div class="top-bottom"
+                <div class="top-bottom">
                 <p>Posted by ${blogPost.author}</p>
-                </div>
-                <div id="blog-img"><img src=${blogPost.image}></div>
-               
+                </div>            
                 <h1>${blogPost.title}</h1>
+                <div id="blog-img"><img src=${blogPost.image}></div>
                 <h5><i> ${formatedDate} </i></h5>
                 <hr>
-                <section id="section-blog-content">
-                    <p>${firstPageContent}<a href="post.html?id=${id}" class="read-more" data-id="${id}"><i>...Read more</i></a></p>
-                    </section>
-
-                    <div class="top-bottom"
+                <p>${firstPageContent}<a href="post.html?id=${id}" class="read-more" data-id="${id}"><i>...Read more</i></a></p>
+                     <div class="top-bottom">
                     <i>${allTags}</i>
                     </div>
 
                     </article>
             `
         }
-                document.getElementById('blog-content').innerHTML = blogPostsHTML;
+                document.getElementById('content').innerHTML = blogPostsHTML;
                
 
             } catch(error) {
