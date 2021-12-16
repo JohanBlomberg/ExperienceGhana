@@ -66,7 +66,7 @@ async function fetchAllBlogPosts() {
             let firstPageContent = blogPost.content.substring(0,300)
 
             blogPostsHTML += `
-                <article class="each-blog-post" data-id=${id}>
+                <article class="one-frame" data-id=${id}>
                 <div class="top-bottom">
                 <p>Posted by ${blogPost.author}</p>
                 </div>            

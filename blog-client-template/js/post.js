@@ -72,7 +72,7 @@ getSpecificBlogPost()
                     <div id="blog-content">
                     <h1 id="one-post-headline">${specificBlogPost.title}</h1>
                     <p><strong><i>${formatedDate}</i></strong></p> 
-                    <main id="each-blog-post">
+                    <main id="one-frame">
                     
                     <div class="blog-img"></div>
                     <p>${specificBlogPost.content}</p>
