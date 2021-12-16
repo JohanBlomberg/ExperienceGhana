@@ -10,7 +10,10 @@ const cors = require('cors');               // Import for handling cross-origin 
 //     console.log('This is a middleware running');
 // });
 
-app.use(cors());                            // Allowing cross-origin requests
+app.use(cors({
+origin: '*'
+})
+);                            // Allowing cross-origin requests
 app.use(bodyParser.json());                 // Format data to JSON
 
 // Import routes
