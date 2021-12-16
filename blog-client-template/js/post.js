@@ -11,14 +11,17 @@ getSpecificBlogPost()
 
             try {
                 let response = await fetch(url + id)
-                console.log(response)
+            
                 let specificBlogPost = await response.json()
-                console.log(specificBlogPost)
+             
+                if (!response.ok){
+                    throw new Error ('Network problem')
+                }
                 
                 /*Get # before each tag*/
                 let allTags =""
                 specificBlogPost.tags.forEach(element => allTags += `#${element} `)
-                console.log(allTags)
+               
                 
                 let blogDate = new Date(specificBlogPost.date);
                 /*Set name of month*/ 
@@ -69,7 +72,7 @@ getSpecificBlogPost()
                     <div id="blog-content">
                     <h1 id="one-post-headline">${specificBlogPost.title}</h1>
                     <p><strong><i>${formatedDate}</i></strong></p> 
-                    <main id="each-blog-post">
+                    <main id="one-frame">
                     
                     <div class="blog-img"></div>
                     <p>${specificBlogPost.content}</p>

@@ -7,7 +7,6 @@ body{
     text-align: center;
 }
 
-
 /* HEADER IMG OCH TEXT*/
 header{
     background-image: url("https://cdn.pixabay.com/photo/2017/01/02/18/58/accra-1947665_960_720.jpg");
@@ -53,33 +52,18 @@ margin: 50px 0;
     width: 600px;
     }
 
+    #logo-image-post img{
+        margin-top: 20px;
+        height: 150px;
+        width: 400px;
+        }
 
 /* BLOG CONTENT INDEX HTML*/
-.blog-content{
-    width: 960px;
-    height: auto;
-    margin: 0 auto;
-    border: 1px solid black;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    align-content: center;
-}
 
-main{
-    width: 100%;
-    height: auto;
-    min-height: 500px;
-    height: auto;
-    box-shadow: 0 0 5px 2px rgba(0, 0, 0, .2);
-    
-}
 .top-bottom{
     float: right;
-    margin: -10px 0 15px;
     font-size: 12px;
     text-transform: uppercase;
-    
 }
 hr {
     background:#dedede;
@@ -87,27 +71,23 @@ hr {
     height:1px;
 }
 
-.each-blog-post{
-    width:800px;
+.one-frame{
+    max-width:800px;
     margin:25px auto;
     padding:25px;
-    background-color: #f8ffbd0e;
     border:1px solid #dedede;
     -webkit-box-shadow: 1px 1px 1px 0px rgba(204,204,204,0.35);
     -moz-box-shadow: 1px 1px 1px 0px rgba(204,204,204,0.35);
     box-shadow: 1px 1px 1px 0px rgba(204,204,204,0.35);
 }
 #one-post-headline{
-    font-size: 60px;
-    min-height: 100px;
-    margin: 25px 0 -20px;
+    min-height: 50px;
 }
 
 #one-blog-post{
-    width:800px;
+    max-width:800px;
     margin:25px auto;
     padding:25px;
-    background-color: #f8ffbd0e;
     border:1px solid #dedede;
     -webkit-box-shadow: 1px 1px 1px 0px rgba(204,204,204,0.35);
     -moz-box-shadow: 1px 1px 1px 0px rgba(204,204,204,0.35);
@@ -117,11 +97,10 @@ hr {
 h1{
     color: #363636;
     font-weight: bold;
-    font-size: 20px;
     font-size:xx-large;
     
 }
-#one-blog-post a{
+a{
     color: rgb(6, 153, 37);
     font-style: italic;
 }
@@ -133,26 +112,12 @@ h1{
     
 }
 
-#blog-content{
-    min-height: 70%;
-}
-#blog-content h1 + h5 {
-    margin: -25px 0 20px;
-    color: #363636;
-  }
-
-
-.blog-img{
-    height: 400px;
+.blog-img img{
+    height: 250px;
     width: 100%;
     background-size: contain;
     margin-top: 2%;
     padding: 0 150px;
-}
-
-#blog-content a{
-    color: rgb(6, 153, 37);
-    font-style: italic;
 }
 
 .admin a{
