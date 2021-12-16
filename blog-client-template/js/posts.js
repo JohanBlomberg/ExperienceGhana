@@ -69,7 +69,7 @@ async function fetchAllBlogPosts() {
                 <div class="top-bottom"
                 <p>Posted by ${blogPost.author}</p>
                 </div>
-                <div id="blog-img"><img src=${blogPost.image}></div>
+                <div id="blog-img"><img class="blog-img" src=${blogPost.image}></div>
                
                 <h1>${blogPost.title}</h1>
                 <h5><i> ${formatedDate} </i></h5>
