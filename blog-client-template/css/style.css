@@ -111,11 +111,13 @@ a{
     justify-content: space-between; 
     
 }
+
 .blog-img img{
     height: 250px;
     width: 100%;
-    background-size: cover;
+    background-size: contain;
     margin-top: 2%;
+    padding: 0 150px;
 }
 
 .admin a{

@@ -69,7 +69,9 @@ async function fetchAllBlogPosts() {
                 <article class="one-frame" data-id=${id}>
                 <div class="top-bottom">
                 <p>Posted by ${blogPost.author}</p>
-                </div>            
+
+                </div>           
+
                 <h1>${blogPost.title}</h1>
                 <div id="blog-img"><img src=${blogPost.image}></div>
                 <h5><i> ${formatedDate} </i></h5>
