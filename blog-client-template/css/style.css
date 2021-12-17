@@ -1,3 +1,11 @@
+:root {
+    --border-boxshadow: 1px 1px 1px 0px rgba(204,204,204,0.35);
+    --border-color:#dedede;
+    --main-transition: 0.3s ease-in-out;
+    --text-decoration: none;
+    --text-transform: uppercase;
+  } 
+
 *{
     box-sizing: border-box;
 }
@@ -34,13 +42,13 @@ header{
 .navbar-main a, .navbar-admin a {
     color: white;
     font-size: 25px;
-    text-decoration: none;
-    transition: 0.3s ease-in-out;    
+    text-decoration: var(--text-decoration);
+    transition: var(--main-transition);   
 }
 
 .navbar-main a:hover, .navbar-admin a:hover {
     color: rgb(20, 182, 20);
-    transition: 0.3s ease-in-out;
+    transition: var(--main-transition);
 }
 
 #logo-image{
@@ -63,10 +71,10 @@ margin: 50px 0;
 .top-bottom{
     float: right;
     font-size: 12px;
-    text-transform: uppercase;
+    text-transform: var(--text-transform);
 }
 hr {
-    background:#dedede;
+    background: var(--border-color);
     border:0;
     height:1px;
 }
@@ -75,10 +83,10 @@ hr {
     max-width:800px;
     margin:25px auto;
     padding:25px;
-    border:1px solid #dedede;
-    -webkit-box-shadow: 1px 1px 1px 0px rgba(204,204,204,0.35);
-    -moz-box-shadow: 1px 1px 1px 0px rgba(204,204,204,0.35);
-    box-shadow: 1px 1px 1px 0px rgba(204,204,204,0.35);
+    border:1px solid var(--border-color);
+    -webkit-box-shadow: var(--border-boxshadow);
+    -moz-box-shadow: var(--border-boxshadow);
+    box-shadow: var(--border-boxshadow);
 }
 #one-post-headline{
     min-height: 50px;
@@ -88,10 +96,10 @@ hr {
     max-width:800px;
     margin:25px auto;
     padding:25px;
-    border:1px solid #dedede;
-    -webkit-box-shadow: 1px 1px 1px 0px rgba(204,204,204,0.35);
-    -moz-box-shadow: 1px 1px 1px 0px rgba(204,204,204,0.35);
-    box-shadow: 1px 1px 1px 0px rgba(204,204,204,0.35);
+    border:1px solid var(--border-color);
+    -webkit-box-shadow: var(--border-boxshadow);
+    -moz-box-shadow: var(--border-boxshadow);
+    box-shadow: var(--border-boxshadow);
     
 }
 h1{
@@ -122,9 +130,9 @@ a{
         padding:10px 20px 5px;
         font-size:16px;
         font-weight: bold;
-        text-decoration:none;
+        text-decoration:var(--text-decoration);
         letter-spacing:2px;
-        text-transform:uppercase;
+        text-transform:var(--text-transform);
         border-radius: 80% 0 65% 20%;
     }
     .admin a:hover{
@@ -134,5 +142,5 @@ a{
 .author-one-post{
   
     font-size: 12px;
-    text-transform: uppercase;
+    text-transform: var(--text-transform);
 }

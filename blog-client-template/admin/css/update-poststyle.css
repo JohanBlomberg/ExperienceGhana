@@ -1,3 +1,11 @@
+:root {
+    --border-color: rgb(37, 252, 198);
+    --input-bg-color: rgb(225, 255, 208);
+    --main-fontstyle: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    --input-width: 100%;
+    --crusor-style: pointer;
+  }
+  
 #submitFormBtn {
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     display: flex;
@@ -5,7 +13,7 @@
     justify-content: center;
     align-items: center;
     height: 40px;
-    width: 100%;
+    width: var(--input-width);
     background-color: #d2dbee;
     border: none;
     margin-top: 20px;
@@ -14,7 +22,7 @@
     background-color: #44fd44; 
     border: 1px solid #b1ffa2;
     font-size: larger;
-    cursor: pointer;
+    cursor: var(--crusor-style);
 }
 #submitFormBtn:focus{
     border: 3px solid rgb(29, 245, 144);
@@ -22,7 +30,7 @@
 }
 #inputField {
     border-radius: 10px;
-    width: 100%;
+    width: var(--input-width);
     height: 200px;
 }
 #mainContainer {
@@ -32,10 +40,11 @@
     align-items: center;
 }
 h1 {
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family:var(--main-fontstyle);
     font-size: 35px;
     margin-top: 10px;
 }
+
 #updateForm, #createForm {
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
@@ -47,49 +56,49 @@ h1 {
 }
 #content-textarea {
     border-style: groove;
-    width: 100%;
+    width: var(--input-width);
 }
 #tags {
     padding: 5%;
     overflow: hidden;
 }
 #update-title:focus {
-    border: 3px solid rgb(37, 252, 198);
-    background-color: rgb(225, 255, 208);
+    border: 3px solid var(--border-color);
+    background-color: var(--input-bg-color);
 }
 #update-author:focus {
-    border: 3px solid rgb(37, 252, 198);
-    background-color: rgb(225, 255, 208);
+    border: 3px solid var(--border-color);
+    background-color: var(--input-bg-color);
 }
 #content-textarea:focus {
-    border: 3px solid rgb(37, 252, 198);
-    background-color: rgb(225, 255, 208);
+    border: 3px solid var(--border-color);
+    background-color: var(--input-bg-color);
 }
 #tags:focus {
-    border: 3px solid rgb(37, 252, 198);
-    background-color: rgb(225, 255, 208);
+    border: 3px solid var(--border-color);
+    background-color: var(--input-bg-color);
 }
 #update-title:hover {
-    border: 3px solid rgb(37, 252, 198);
-    cursor: pointer;
+    border: 3px solid var(--border-color);
+    cursor: var(--crusor-style);
 }
 #update-author:hover {
-    border: 3px solid rgb(37, 252, 198);
-    cursor: pointer;
+    border: 3px solid var(--border-color);
+    cursor: var(--crusor-style);
 }
 #content-textarea:hover {
-    border: 3px solid rgb(37, 252, 198);
-    cursor: pointer;
+    border: 3px solid var(--border-color);
+    cursor: var(--crusor-style);
 }
 #tags:hover {
-    border: 3px solid rgb(37, 252, 198);
-    cursor: pointer;
+    border: 3px solid var(--border-color);
+    cursor: var(--crusor-style);
 }
 #backlink{
     background-color: #e4edff;
     border: none;
     height: 40px;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family:var(--main-fontstyle);
     text-decoration: none;
     width: 110px;
     color: rgb(0, 0, 0);
@@ -99,6 +108,6 @@ h1 {
 }
 #backlink:hover {
     background-color: #bbf5f7; 
-    cursor: pointer;
+    cursor: var(--crusor-style);
 }
 
