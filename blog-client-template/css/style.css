@@ -106,10 +106,7 @@ a{
 }
 
 #one-post-footer{
-    border: 1px solig black;
-    display: flex;
-    justify-content: space-between; 
-    
+    padding: 20px;
 }
 
 .blog-img img{
