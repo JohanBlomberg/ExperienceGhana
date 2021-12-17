@@ -1,3 +1,10 @@
+:root {
+    --border-style: none; 
+    --main-fontstyle: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    --button-height: 40px;
+    --crusor-style: pointer;
+  } 
+
 #main-content {
     display: flex;
     flex-direction: column;
@@ -36,11 +43,11 @@ table, tr, th, td {
 }
 
 tr{
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+    font-family:var(--main-fontstyle);
 }
 
 h1 {
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family:var(--main-fontstyle);
     font-size: 15px;
     margin-top: 10px;
 }
@@ -52,42 +59,40 @@ h1 {
 
 #create-post-link, #blog-page-link {
     background-color: #e4edff;
-    cursor: pointer;
-    border: none;
-    height: 40px;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    cursor: var(--crusor-style);
+    border: var(--border-style);
+    height: var(--button-height);
+    font-family: var(--main-fontstyle);
 }
 
 .update-post{
     background-color: rgb(112, 224, 77);
-    border: none;
-    height: 40px;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border: var(--border-style);
+    height: var(--button-height);
+    font-family: var(--main-fontstyle);
 }
 
 #update-btn:hover, .update-post:hover  {
     background-color: rgb(6, 255, 27);
     color: white;
-    cursor: pointer;
-    border: none;
-    height: 40px;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    cursor: var(--crusor-style);
+    border: var(--border-style);
+    font-family: var(--main-fontstyle);
   }
 
 .delete-post{
     background-color: rgb(255, 86, 86);
-    border: none;
-    height: 40px;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border: var(--border-style);
+    height: var(--button-height);
+    font-family: var(--main-fontstyle);
 }
 
 .delete-post:hover {
     background-color: rgb(255, 17, 17);
     color: white;
-    cursor: pointer;
-    border: none;
-    height: 40px;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    cursor: var(--crusor-style);
+    border: var(--border-style);
+    font-family: var(--main-fontstyle);
   }
 
 #create-post-link:hover {
