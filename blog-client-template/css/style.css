@@ -114,15 +114,11 @@ a{
 }
 
 #one-post-footer{
-    border: 1px solig black;
-    display: flex;
-    justify-content: space-between; 
-    
+    padding: 20px;
 }
 
 .blog-img img{
     height: 250px;
-    width: 100%;
     background-size: contain;
     margin-top: 2%;
     padding: 0 150px;

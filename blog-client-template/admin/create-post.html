@@ -3,26 +3,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create Blogpost</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/update-poststyle.css">
 </head>
 <body>
      <nav class="backBtn">
-            <a href='index.html'>Back to Admin</a>
+            <a href='index.html' id="backlink">Back to Admin</a>
         </nav>
 
     <header>
-        <h1>Create Blogpost</h1>
+        
     </header>
 
-    <div id="errorMessage">
-
-     </div>
-     
     <div id="mainContainer">
-
+        <h1>Create Blogpost</h1>
         <form id="createForm">
             <p>Title:</p>
-            <input type="text" name="title" required></input>
+            <input type="text" name="title" id="create-title" required></input>
             <p>Author:</p>
             <input type="text" name="author" required></input>
             <p>Content:</p>
@@ -39,11 +35,9 @@
                     <option value="Wedding">Wedding</option>
                  </select>
 
-                  <input type="submit" value="create">
+                  <input type="submit" value="create" id="submitFormBtn">
         </form>
   </div>
-
-    <footer>PLACEHOLDER FOOTER</footer>
     <script src="js/create-post.js"></script>
 </body>
 </html>

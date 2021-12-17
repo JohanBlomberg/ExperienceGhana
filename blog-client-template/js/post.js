@@ -71,10 +71,11 @@ getSpecificBlogPost()
                     let oneBlogPostHTML = `
                     <div id="blog-content">
                     <h1 id="one-post-headline">${specificBlogPost.title}</h1>
+                    <div class="blog-img"><img src=${specificBlogPost.image}></div>
                     <p><strong><i>${formatedDate}</i></strong></p> 
                     <main id="one-frame">
                     
-                    <div class="blog-img"></div>
+                    
                     <p>${specificBlogPost.content}</p>
                     <footer id="one-post-footer"> 
                     

@@ -44,14 +44,15 @@ h1 {
     font-size: 35px;
     margin-top: 10px;
 }
-#updateForm {
-    font-family:var(--main-fontstyle);
+
+#updateForm, #createForm {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-#update-title {
-    width: var(--input-width);
+#update-title, #create-title {
+    width: 100%;
 }
-#update-author {
-    width: var(--input-width);
+#update-author, #create-author {
+    width: 100%;
 }
 #content-textarea {
     border-style: groove;
