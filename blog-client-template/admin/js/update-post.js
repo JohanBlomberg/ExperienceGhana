@@ -21,6 +21,7 @@ window.onload = function() {
         document.getElementById('content-textarea').value = blogPost.content;
         document.getElementById('update-author').value = blogPost.author;
         document.getElementById('update-title').value = blogPost.title;
+        document.getElementById('update-image').value = blogPost.image;
       
     } catch(error) {
         console.log(error);
@@ -38,6 +39,7 @@ window.onload = function() {
             "title": formData.get('title'),
             "author": formData.get('author'),
             "content": formData.get('content'),
+            "image": formData.get('image'),
             "tags": formData.getAll('tags')
 
         }

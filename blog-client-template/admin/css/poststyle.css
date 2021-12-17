@@ -36,13 +36,13 @@ h1 {
     font-size: 35px;
     margin-top: 10px;
 }
-#updateForm {
+#updateForm, #createForm {
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-#update-title {
+#update-title, #create-title {
     width: 100%;
 }
-#update-author {
+#update-author, #create-author {
     width: 100%;
 }
 #content-textarea {

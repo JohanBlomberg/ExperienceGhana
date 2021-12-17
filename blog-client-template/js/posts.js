@@ -73,7 +73,7 @@ async function fetchAllBlogPosts() {
                 </div>           
 
                 <h1>${blogPost.title}</h1>
-                <div id="blog-img"><img src=${blogPost.image}></div>
+                <div class="blog-img"><img src=${blogPost.image}></div>
                 <h5><i> ${formatedDate} </i></h5>
                 <hr>
                 <p>${firstPageContent}<a href="post.html?id=${id}" class="read-more" data-id="${id}"><i>...Read more</i></a></p>
